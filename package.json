@@ -1,0 +1,20 @@
+{
+  "name": "master",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^18.0.6",
+    "node-fetch": "^3.2.6",
+    "python3": "^0.0.1",
+    "sass": "^1.58.3",
+    "turndown": "^7.1.1"
+  }
+}
