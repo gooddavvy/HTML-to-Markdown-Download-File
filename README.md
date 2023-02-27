@@ -4,7 +4,7 @@ This is a Next.js+Typescript app. You input HTML into the app, it outputs the HT
 
 ## Why did this project come up?
 
-Well, it wasn't actaully *my* project. However, I got it in the coding job my dad gave me.
+Well, it wasn't actually *my* project. However, I got it in the coding job my dad gave me.
 
 ### How can I see this running on Replit? I saw the files "replit.nix" and ".replit".
 
