@@ -1,6 +1,6 @@
 run = "cd main && npm run dev"
 
-hidden = [".config", "package-lock.json", "index.js", "main/.next"]
+hidden = [".config", "package-lock.json", "index.js", ".gitignore", "main/.next"]
 
 [[hints]]
 regex = "Error \\[ERR_REQUIRE_ESM\\]"
