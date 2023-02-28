@@ -1,6 +1,10 @@
 node_modules
 <<<<<<< HEAD
+<<<<<<< HEAD
 main/node_modules
+=======
+main/node_modules
+>>>>>>> origin/main
 =======
 main/node_modules
 >>>>>>> origin/main
