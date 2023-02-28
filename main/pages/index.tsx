@@ -14,9 +14,7 @@ export default function Home() {
 
   useEffect(() => setIsClient(true), []);
 
-  if (!isClient) {
-    return null;
-  }
+  if (!isClient) return null;
 
   var location = window.location;
   var parent = window.parent;
