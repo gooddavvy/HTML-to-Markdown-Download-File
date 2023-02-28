@@ -7,7 +7,7 @@ export default function MainComponent(): JSX.Element {
   var [invisibleComponent, setInvisibleComponent] = useState(<div />);
 
   var createFile = async function(): Promise<void> {
-    var response = await fetch(`/api/createFile?fileName=file.md&fileContent=${htmlToMarkdown(textareaContent)}`);
+    var response = await fetch(`/api/createFile?fileName=file.md&fileContent=${textareaContent}`);
     var data = await response.text();
     console.log(data);
   };
@@ -16,7 +16,7 @@ export default function MainComponent(): JSX.Element {
     e.preventDefault();
     createFile();
     setInvisibleComponent(<p>Please wait for a few seconds while we get ready to download your file...</p>)
-    setTimeout(5000, () => {})
+    setTimeout(() => {}, 5000)
     setInvisibleComponent(<DownloadComponent fileUrl='/file.md' linkDownload='file.md'>Hello World!</DownloadComponent>);
   };
 
