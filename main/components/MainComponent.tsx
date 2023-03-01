@@ -7,6 +7,7 @@ export default function MainComponent(): JSX.Element {
   var [invisibleComponent, setInvisibleComponent] = useState(<div />);
 
   var createFile = async function(): Promise<void> {
+    setTextareaContent(textareaContent.replace(/[^\w\s]/gi, ""))
     try {
       var response = await fetch(`/api/createFile?fileName=file.md&fileContent=${textareaContent}`);
       var data = await response.text();
@@ -21,8 +22,6 @@ export default function MainComponent(): JSX.Element {
   var onSubmit: React.FormEventHandler<HTMLFormElement> = e => {
     e.preventDefault();
     createFile();
-    setInvisibleComponent(<p>Please wait for a few seconds while we get ready to download your file...</p>)
-    setTimeout(() => { }, 5000)
     setInvisibleComponent(<DownloadComponent fileUrl='/file.md' linkDownload='file.md'>Hello World!</DownloadComponent>);
   };
 
@@ -44,11 +43,11 @@ export default function MainComponent(): JSX.Element {
           >
           )
         }></textarea>
-{/*     line 35 below */}
-      
-  {/*         width={100} */}
-{/*         columns={1000} */}
-{/*         <br /> */}
+      {/*     line 35 below */}
+
+      {/*         width={100} */}
+      {/*         columns={1000} */}
+      {/*         <br /> */}
       <button type="submit">Submit</button>
     </form>
     <div style={{ /*visibility: "hidden"*/ }}>{invisibleComponent}</div>
